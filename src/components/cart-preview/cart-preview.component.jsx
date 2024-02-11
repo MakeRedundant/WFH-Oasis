@@ -1,18 +1,27 @@
 import React from "react";
 import "./cart-preview.styles.scss";
-import { withRouter } from "react-router-dom";
-
-import CustomButton from "../custom-button/custom-button.component";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
+import { useNavigate } from "react-router-dom";
 
+import CustomButton from "../custom-button/custom-button.component";
+import CartItem from "../cart-item/cart-item.component";
 import { selectCartItems } from "../../redux/cart/cart.selectors";
 import { selectCurrentUser } from "../../redux/user/user.selectors";
 import { toggleCartHidden } from "../../redux/cart/cart.actions";
 
-import CartItem from "../cart-item/cart-item.component";
+const CartPreview = ({ cartItems, currentUser, dispatch }) => {
+  const navigate = useNavigate();
 
-const CartPreview = ({ cartItems, history, currentUser, dispatch }) => {
+  const redirectToCheckout = () => {
+    if (currentUser) {
+      navigate("/checkout");
+    } else {
+      navigate("/signup");
+    }
+    dispatch(toggleCartHidden());
+  };
+
   return (
     <div className="cart-preview">
       <div className="cart-preview__block--top">
@@ -38,14 +47,7 @@ const CartPreview = ({ cartItems, history, currentUser, dispatch }) => {
             Sign up for 10% off your first order and 5% off the second. Valid
             within five days of signup.
           </p>
-          <CustomButton
-            onClick={() => {
-              currentUser
-                ? (window.location.href = "/checkout")
-                : (window.location.href = "/signup");
-              dispatch(toggleCartHidden());
-            }}
-          >
+          <CustomButton onClick={redirectToCheckout}>
             CONTINUE TO CHECKOUT
           </CustomButton>
         </div>
@@ -59,4 +61,4 @@ const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser,
 });
 
-export default withRouter(connect(mapStateToProps, null)(CartPreview));
+export default connect(mapStateToProps, null)(CartPreview);

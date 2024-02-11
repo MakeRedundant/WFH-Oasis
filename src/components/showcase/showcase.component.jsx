@@ -6,7 +6,10 @@ import ShopItem from "../shop-item/shop-item.component";
 
 import SHOP_DATA from "../../pages/shop/shop.data";
 
-import { shopFilterAnimation, ShopScrollAnimation } from "../../animations/animations";
+import {
+  shopFilterAnimation,
+  ShopScrollAnimation,
+} from "../../animations/animations";
 import { get } from "jquery";
 
 const ItemsShowcase = ({ filtered, category }) => {

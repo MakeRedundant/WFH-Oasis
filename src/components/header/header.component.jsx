@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import "./header.styles.scss";
 import {
   InitHamburgerAnimation,
@@ -6,7 +6,8 @@ import {
   menuLinkAnimation,
 } from "../../animations/animations";
 import { Link } from "react-router-dom";
-// import { auth } from "../../firebase/firebase.utils";
+
+
 import { connect } from "react-redux";
 
 import { createStructuredSelector } from "reselect";
@@ -161,4 +162,5 @@ const mapStateToProps = createStructuredSelector({
 const matchDispatchToProps = (dispatch) => ({
   setCurrentUser: (user) => dispatch(setCurrentUser(user)),
 });
-export default connect(mapStateToProps, matchDispatchToProps)(Header);
+// export default connect(mapStateToProps, matchDispatchToProps)(Header);
+export default Header;

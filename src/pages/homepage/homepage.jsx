@@ -7,10 +7,11 @@ import CollectionPreview from "../../components/collections-preview/collections-
 
 import { ScrollTriggerAnimations } from "../../animations/animations.js";
 
-import { VideoIsh } from "../../assets/assets.js";
+import VideoIsh from "../../assets/img/video-ish.jpg";
 import { PlaySVG } from "../../assets/assets.js";
 import { connect } from "react-redux";
 import { toggleModalHidden } from "../../redux/product-modal/product-modal.actions.js";
+import Header from "../../components/header/header.component.jsx";
 
 
 
@@ -18,6 +19,7 @@ const HomePage = () => {
 
   return (
     <>
+    <Header />
       <Hero />
       <section className="section__about anim-content">
         <div className="about__content ">
@@ -42,7 +44,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      {/* <CollectionPreview /> */}
+      <CollectionPreview />
 
       <section className="section__video">
         <img src={VideoIsh} alt="video" className="video__img" />
