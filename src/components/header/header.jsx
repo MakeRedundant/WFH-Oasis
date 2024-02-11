@@ -7,16 +7,17 @@ import {
 } from "../../animations/animations";
 import { Link } from "react-router-dom";
 
-
 import { connect } from "react-redux";
-
 import { createStructuredSelector } from "reselect";
 import { selectCurrentUser } from "../../redux/user/user.selectors";
 import { setCurrentUser } from "../../redux/user/user.actions";
 import { selectCartHidden } from "../../redux/cart/cart.selectors";
 import CartIcon from "../cart-icon/cart-icon.component";
 import CartPreview from "../cart-preview/cart-preview.component";
-import { logo, menuImages } from "../../assets/assets";
+// import { logo, menuImages } from "../../assets/assets";
+
+import logos from "../../assets/img/CELESTIAL.png";
+import { menuImages } from "../../assets/assets";
 
 import Modal from "../modal/added-to-cart.component";
 
@@ -32,7 +33,7 @@ const Header = (props) => {
     <div className="header">
       <Link to="/#" className="anim__hide">
         {" "}
-        <img src={logo} alt="logo" className="header__logo " />
+        <img src={logos} alt="logo" className="header__logo " />
       </Link>
       <div className="header__right">
         <Link to="/#" className="header__item anim__hide ">
@@ -59,7 +60,7 @@ const Header = (props) => {
             Login{" "}
           </Link>
         )}
-        {/* <CartIcon /> */}
+        <CartIcon />
 
         <Modal />
 
@@ -69,7 +70,7 @@ const Header = (props) => {
           <span className="line"></span>
         </div>
       </div>
-      {/* {hidden ? null : <CartPreview />} */}
+      {hidden ? null : <CartPreview />}
 
       <nav className="menu-nav">
         <div className="menu-nav__left">
@@ -103,7 +104,7 @@ const Header = (props) => {
 
         <div className="menu-nav__right">
           <header className="menu-nav__head">
-            <img src={logo} alt="logo" className="menu-logo" />
+            <img src={logos} alt="logo" className="menu-logo" />
           </header>
 
           <div className="menu-nav__main">
@@ -152,4 +153,12 @@ const Header = (props) => {
   );
 };
 
-export default Header;
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
+  hidden: selectCartHidden,
+});
+
+const matchDispatchToProps = (dispatch) => ({
+  setCurrentUser: (user) => dispatch(setCurrentUser(user)),
+});
+export default connect(mapStateToProps, matchDispatchToProps)(Header);

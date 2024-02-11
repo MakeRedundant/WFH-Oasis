@@ -13,7 +13,6 @@ import {
 
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
-
 import { selectDirectorySection } from "../../redux/directory/directory.selector";
 
 const CollectionPreview = ({ collections }) => {
@@ -95,8 +94,6 @@ const CollectionPreview = ({ collections }) => {
               id="5"
             />
         </div>
-
-        
 
         <div className="preview__text">
           {collections.map(({ id, urlTitle }) => (
