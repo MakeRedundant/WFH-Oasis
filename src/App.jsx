@@ -1,8 +1,9 @@
 import './App.css';
+import "./scss/main.scss";
 import Homepage from './pages/homepage/homepage';
 import { BrowserRouter as Router } from 'react-router-dom';
-// import { Provider } from 'react-redux';
-
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
 
 // import { Switch, Route, withRouter, Redirect } from "react-router-dom";
 // import Header from "./components/header/header.component";
@@ -22,14 +23,12 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   return (
+    <Provider store={store}>
       <Router>
         <Homepage />
       </Router>
+    </Provider>
   );
 }
 
 export default App;
-
-import "./App.css";
-import "./scss/main.scss";
-

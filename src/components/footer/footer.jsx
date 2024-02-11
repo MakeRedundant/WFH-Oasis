@@ -1,5 +1,5 @@
 import React from "react";
-import "./footer.styles.scss";
+import "./footer.scss";
 import logo from "../../assets/svg/logo-white.svg";
 import facebook from "../../assets/svg/facebook.svg";
 import Instagram from "../../assets/svg/instagram.svg";

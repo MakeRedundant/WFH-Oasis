@@ -1,25 +1,32 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import "./homepage.scss";
 import Hero from "../../components/hero/hero.component";
 import FormInput from "../../components/form-input/form-input.component";
-import { imgAbout1, imgAbout2, imgEthos1, imgEthos2 } from "../../assets/assets.js";
+import {
+  imgAbout1,
+  imgAbout2,
+  imgEthos1,
+  imgEthos2,
+} from "../../assets/assets.js";
 import CollectionPreview from "../../components/collections-preview/collections-preview.component";
 
 import { ScrollTriggerAnimations } from "../../animations/animations.js";
 
 import VideoIsh from "../../assets/img/video-ish.jpg";
 import { PlaySVG } from "../../assets/assets.js";
+import Header from "../../components/header/header.jsx";
+import Footer from "../../components/footer/footer.jsx";
+
 import { connect } from "react-redux";
 import { toggleModalHidden } from "../../redux/product-modal/product-modal.actions.js";
-import Header from "../../components/header/header.component.jsx";
-
-
 
 const HomePage = () => {
-
+  useEffect(() => {
+    ScrollTriggerAnimations();
+  });
   return (
     <>
-    <Header />
+      <Header />
       <Hero />
       <section className="section__about anim-content">
         <div className="about__content ">
@@ -86,10 +93,13 @@ const HomePage = () => {
           <button>Subscribe</button>
         </form>
       </section>
+      <Footer />
     </>
   );
 };
 
+// const mapDispatchToProps = (dispatch) => ({
+//   setModalHidden: (value) => dispatch(toggleModalHidden(value)),
+// });
 
 export default HomePage;
-// export default connect(null, mapDispatchToProps)(HomePage);

@@ -11,10 +11,8 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
 import { createStructuredSelector } from "reselect";
-
 import { selectCurrentUser } from "../../redux/user/user.selectors";
 import { setCurrentUser } from "../../redux/user/user.actions";
-
 import { selectCartHidden } from "../../redux/cart/cart.selectors";
 import CartIcon from "../cart-icon/cart-icon.component";
 import CartPreview from "../cart-preview/cart-preview.component";
@@ -61,7 +59,7 @@ const Header = (props) => {
             Login{" "}
           </Link>
         )}
-        <CartIcon />
+        {/* <CartIcon /> */}
 
         <Modal />
 
@@ -71,7 +69,7 @@ const Header = (props) => {
           <span className="line"></span>
         </div>
       </div>
-      {hidden ? null : <CartPreview />}
+      {/* {hidden ? null : <CartPreview />} */}
 
       <nav className="menu-nav">
         <div className="menu-nav__left">
@@ -133,9 +131,9 @@ const Header = (props) => {
                 <h2
                   id="4"
                   className="menu-nav__link"
-                  // onClick={() => {
-                  //   auth.signOut();
-                  // }}
+                  onClick={() => {
+                    auth.signOut();
+                  }}
                 >
                   Logout
                 </h2>{" "}
@@ -154,13 +152,4 @@ const Header = (props) => {
   );
 };
 
-const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser,
-  hidden: selectCartHidden,
-});
-
-const matchDispatchToProps = (dispatch) => ({
-  setCurrentUser: (user) => dispatch(setCurrentUser(user)),
-});
-// export default connect(mapStateToProps, matchDispatchToProps)(Header);
 export default Header;
