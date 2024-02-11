@@ -4,6 +4,7 @@ import ItemsShowcase from "../../components/showcase/showcase.component";
 import "./shop.styles.scss";
 import { connect } from "react-redux";
 import { toggleModalHidden } from "../../redux/product-modal/product-modal.actions";
+
 const Ottomans = ({ setModalHidden }) => {
   useEffect(() => {
     window.scrollTo(0, 0);

@@ -1,6 +1,7 @@
 import './App.css';
 import './scss/main.scss';
 import Homepage from './pages/homepage/homepage';
+import Header from './components/header/header';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
@@ -16,6 +17,7 @@ import Checkout from "./pages/checkout/checkout.component";
 
 function App() {
   return (
+
     <Provider store={store}>
       <Router>
         <Routes>

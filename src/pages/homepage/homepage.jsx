@@ -20,9 +20,10 @@ import Footer from "../../components/footer/footer.jsx";
 import { connect } from "react-redux";
 import { toggleModalHidden } from "../../redux/product-modal/product-modal.actions.js";
 
-const HomePage = () => {
+const HomePage = ({ setModalHidden }) => {
   useEffect(() => {
     ScrollTriggerAnimations();
+    setModalHidden(true);
   });
   return (
     <>
@@ -102,4 +103,9 @@ const HomePage = () => {
 //   setModalHidden: (value) => dispatch(toggleModalHidden(value)),
 // });
 
-export default HomePage;
+// export default HomePage;
+
+const mapDispatchToProps = (dispatch) => ({
+  setModalHidden: (value) => dispatch(toggleModalHidden(value)),
+});
+export default connect(null, mapDispatchToProps)(HomePage);
