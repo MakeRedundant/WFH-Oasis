@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import "./shop-title.styles.scss";
-import { iconArrow } from "../../assets/assets";
+import arrowDOwn from "../../assets/img/arrow-down.png";
 
 import { shopFilterAnimation } from "../../animations/animations";
 
@@ -14,7 +14,7 @@ const ShopTitle = ({ category }) => {
       <h3 className="shop__title">
         {category}
         <span className="shop__title--icon">
-          <img src={iconArrow} alt="" />
+          <img src={arrowDOwn} alt="" />
         </span>
       </h3>
     </div>
