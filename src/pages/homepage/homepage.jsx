@@ -9,7 +9,6 @@ import {
   imgEthos2,
 } from "../../assets/assets.js";
 import CollectionPreview from "../../components/collections-preview/collections-preview.component";
-
 import { ScrollTriggerAnimations } from "../../animations/animations.js";
 
 import VideoIsh from "../../assets/img/video-ish.jpg";
@@ -27,8 +26,8 @@ const HomePage = ({ setModalHidden }) => {
   });
   return (
     <>
-      <Header />
-      <Hero />
+      {/* <Header /> Nav bar component with logo, cart  */}
+      <Hero /> {/* We are X company with the slider of product images */}
       <section className="section__about anim-content">
         <div className="about__content ">
           <div className="about__content--text">
@@ -52,7 +51,7 @@ const HomePage = ({ setModalHidden }) => {
           </div>
         </div>
       </section>
-      <CollectionPreview />
+      <CollectionPreview />  {/* THis is the links for the store by category + everything */}
 
       <section className="section__video">
         <img src={VideoIsh} alt="video" className="video__img" />

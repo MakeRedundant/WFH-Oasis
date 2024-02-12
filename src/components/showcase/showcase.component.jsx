@@ -1,3 +1,5 @@
+// THis component 
+
 import React, { useState, useEffect } from "react";
 import "./showcase.styles.scss";
 import { Link } from "react-router-dom";

@@ -17,9 +17,9 @@ import Checkout from "./pages/checkout/checkout.component";
 
 function App() {
   return (
-
     <Provider store={store}>
       <Router>
+        <Header /> {/* Render the Header component persistently */}
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/collections" element={<Everything />} />

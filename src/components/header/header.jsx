@@ -6,29 +6,22 @@ import {
   menuLinkAnimation,
 } from "../../animations/animations";
 import { Link } from "react-router-dom";
-
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
-import { selectCurrentUser } from "../../redux/user/user.selectors";
-import { setCurrentUser } from "../../redux/user/user.actions";
 import { selectCartHidden } from "../../redux/cart/cart.selectors";
 import CartIcon from "../cart-icon/cart-icon.component";
 import CartPreview from "../cart-preview/cart-preview.component";
-// import { logo, menuImages } from "../../assets/assets";
-
 import logos from "../../assets/img/CELESTIAL.png";
 import { menuImages } from "../../assets/assets";
-
 import Modal from "../modal/added-to-cart.component";
 
-const Header = (props) => {
+const Header = ({ hidden }) => {
   useEffect(() => {
     InitHamburgerAnimation();
     menuAnimation();
     menuLinkAnimation();
-  });
+  }, []);
 
-  const { currentUser, hidden } = props;
   return (
     <div className="header">
       <Link to="/#" className="anim__hide">
@@ -49,9 +42,7 @@ const Header = (props) => {
           Login
         </Link>
         <CartIcon />
-
         <Modal />
-
         <div className="hamburger" id="hamburger">
           <span className="line"></span>
           <span className="line"></span>
@@ -59,7 +50,6 @@ const Header = (props) => {
         </div>
       </div>
       {hidden ? null : <CartPreview />}
-
       <nav className="menu-nav">
         <div className="menu-nav__left">
           <div className="menu-nav__left--imgs">
@@ -115,11 +105,11 @@ const Header = (props) => {
                 About
               </h2>
             </Link>
-              <Link to="/login" className="menu-link">
-                <h2 id="4" className="menu-nav__link">
-                  Login
-                </h2>{" "}
-              </Link>
+            <Link to="/login" className="menu-link">
+              <h2 id="4" className="menu-nav__link">
+                Login
+              </h2>{" "}
+            </Link>
           </div>
         </div>
       </nav>
@@ -128,11 +118,7 @@ const Header = (props) => {
 };
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser,
   hidden: selectCartHidden,
 });
 
-const matchDispatchToProps = (dispatch) => ({
-  setCurrentUser: (user) => dispatch(setCurrentUser(user)),
-});
-export default connect(mapStateToProps, matchDispatchToProps)(Header);
+export default connect(mapStateToProps)(Header);
