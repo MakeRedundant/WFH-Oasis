@@ -13,8 +13,6 @@ import { ScrollTriggerAnimations } from "../../animations/animations.js";
 
 import VideoIsh from "../../assets/img/video-ish.jpg";
 import { PlaySVG } from "../../assets/assets.js";
-import Header from "../../components/header/header.jsx";
-import Footer from "../../components/footer/footer.jsx";
 
 import { connect } from "react-redux";
 import { toggleModalHidden } from "../../redux/product-modal/product-modal.actions.js";
@@ -92,7 +90,6 @@ const HomePage = ({ setModalHidden }) => {
           <button>Subscribe</button>
         </form>
       </section>
-      <Footer />
     </>
   );
 };

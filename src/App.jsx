@@ -2,6 +2,8 @@ import './App.css';
 import './scss/main.scss';
 import Homepage from './pages/homepage/homepage';
 import Header from './components/header/header';
+import Footer from "./components/footer/footer";
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
@@ -31,6 +33,7 @@ function App() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="*" element={<Homepage />} />
         </Routes>
+        <Footer/>
       </Router>
     </Provider>
   );
