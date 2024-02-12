@@ -19,7 +19,7 @@ function App() {
   return (
     <Provider store={store}>
       <Router>
-        <Header /> {/* Render the Header component persistently */}
+        <Header />
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="/collections" element={<Everything />} />

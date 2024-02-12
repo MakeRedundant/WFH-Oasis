@@ -26,8 +26,7 @@ const HomePage = ({ setModalHidden }) => {
   });
   return (
     <>
-      {/* <Header /> Nav bar component with logo, cart  */}
-      <Hero /> {/* We are X company with the slider of product images */}
+      <Hero /> 
       <section className="section__about anim-content">
         <div className="about__content ">
           <div className="about__content--text">
@@ -51,7 +50,7 @@ const HomePage = ({ setModalHidden }) => {
           </div>
         </div>
       </section>
-      <CollectionPreview />  {/* THis is the links for the store by category + everything */}
+      <CollectionPreview />  {/* THis is the homepage links for the store by category + everything */}
 
       <section className="section__video">
         <img src={VideoIsh} alt="video" className="video__img" />

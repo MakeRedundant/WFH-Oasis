@@ -126,12 +126,13 @@ export function shopFilterAnimation() {
       }
     );
 
+    // need to update this make it nicer and not hide the stupid categories
     $(".shop__title, .filter__hide ").click(function () {
-      if (tl.reversed()) {
-        tl.play();
-      } else {
-        tl.reverse();
-      }
+      // if (tl.reversed()) {
+      //   tl.play();
+      // } else {
+      //   tl.reverse();
+      // }
     });
   }
 }
