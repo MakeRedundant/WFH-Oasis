@@ -10,6 +10,8 @@ import {
 } from "../../redux/product-modal/product-modal.actions";
 import { AddedToCartModal } from "../../animations/animations";
 
+// import productModalComponent from "../product-modal/product-modal.component";
+
 const ShopItem = ({
   item,
   addItem,
@@ -23,10 +25,10 @@ const ShopItem = ({
     <div
       className="furniture-item"
       onClick={() => {
-        addItem(item);
-        AddedToCartModal();
+        // addItem(item);
+        // AddedToCartModal();
         updateProductForModal(item);
-        toggleModalHidden();
+        toggleModalHidden(true);
       }}
     >
       <div
@@ -49,6 +51,6 @@ const ShopItem = ({
 const mapDispatchToProps = (dispatch) => ({
   addItem: (item) => dispatch(addItem(item)),
   updateProductForModal: (item) => dispatch(updateProduct(item)),
-  toggleModalHidden: () => dispatch(toggleModalHidden()),
+  toggleModalHidden: (payload) => dispatch(toggleModalHidden(payload)),
 });
 export default connect(null, mapDispatchToProps)(ShopItem);

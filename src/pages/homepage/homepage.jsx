@@ -48,7 +48,7 @@ const HomePage = ({ setModalHidden }) => {
           </div>
         </div>
       </section>
-      <CollectionPreview />  {/* THis is the homepage links for the store by category + everything */}
+      <CollectionPreview />  {/* This is the homepage links for the store by category + everything */}
 
       <section className="section__video">
         <img src={VideoIsh} alt="video" className="video__img" />
@@ -93,11 +93,6 @@ const HomePage = ({ setModalHidden }) => {
     </>
   );
 };
-
-// const mapDispatchToProps = (dispatch) => ({
-//   setModalHidden: (value) => dispatch(toggleModalHidden(value)),
-// });
-
 // export default HomePage;
 
 const mapDispatchToProps = (dispatch) => ({

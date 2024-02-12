@@ -1,6 +1,6 @@
 import ProductDetailActionTypes from "./product-modal.types";
 const INITIAL_STATE = {
-  hidden: true,
+  hidden: false,
   product: {},
 };
 

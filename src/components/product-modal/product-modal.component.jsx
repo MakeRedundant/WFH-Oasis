@@ -1,3 +1,4 @@
+
 import "./product-modal.styles.scss";
 import { createStructuredSelector } from "reselect";
 import { connect } from "react-redux";
@@ -68,4 +69,4 @@ const mapDispatchToProps = (dispatch) => ({
   toggleModalHidden: () => dispatch(toggleModalHidden()),
   addItemToCart: (item) => dispatch(addItem(item)),
 });
-export default (mapStateToProps, mapDispatchToProps)(ProductModal);
+export default connect(mapStateToProps, mapDispatchToProps)(ProductModal);
