@@ -6,6 +6,7 @@ import { selectProductForModal } from "../../redux/product-modal/product-modal.s
 import { toggleModalHidden } from "../../redux/product-modal/product-modal.actions";
 import { addItem } from "../../redux/cart/cart.actions";
 import { AddedToCartModal as addedToCartModal } from "../../animations/animations";
+
 const ProductModal = ({ product, toggleModalHidden, addItemToCart }) => {
   console.log(product);
   return (

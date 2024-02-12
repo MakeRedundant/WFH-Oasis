@@ -51,7 +51,7 @@ const ItemsShowcase = ({ filtered, category }) => {
               <Link to="/collections">Everything</Link>
             </li>
             {shopCategories.map((category) => (
-              <li>
+              <li key = {category}>
                 <Link to={`/category/${category.toLowerCase()}`}>
                   {category}
                 </Link>
@@ -86,7 +86,7 @@ const ItemsShowcase = ({ filtered, category }) => {
               <Link to="/collections">Everything</Link>
             </li>
             {shopCategories.map((category) => (
-              <li>
+              <li key = {category}>
                 {" "}
                 <Link to={`/category/${category.toLowerCase()}`}>
                   {category}

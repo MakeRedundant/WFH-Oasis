@@ -45,21 +45,9 @@ const Header = (props) => {
         <Link to="/#" className="header__item anim__hide">
           About
         </Link>
-        {}
-        {currentUser ? (
-          <div
-            className="header__item anim__hide"
-            onClick={() => {
-              auth.signOut();
-            }}
-          >
-            Logout
-          </div>
-        ) : (
-          <Link to="/login" className="header__item anim__hide">
-            Login{" "}
-          </Link>
-        )}
+        <Link to="/#" className="header__item anim__hide">
+          Login
+        </Link>
         <CartIcon />
 
         <Modal />
@@ -127,25 +115,11 @@ const Header = (props) => {
                 About
               </h2>
             </Link>
-            {currentUser ? (
-              <Link className="menu-link">
-                <h2
-                  id="4"
-                  className="menu-nav__link"
-                  onClick={() => {
-                    auth.signOut();
-                  }}
-                >
-                  Logout
-                </h2>{" "}
-              </Link>
-            ) : (
               <Link to="/login" className="menu-link">
                 <h2 id="4" className="menu-nav__link">
                   Login
                 </h2>{" "}
               </Link>
-            )}
           </div>
         </div>
       </nav>
