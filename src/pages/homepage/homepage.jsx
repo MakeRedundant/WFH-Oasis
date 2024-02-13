@@ -18,15 +18,21 @@ import { ScrollTriggerAnimations } from "../../animations/animations.js";
 import VideoIsh from "../../assets/img/video-ish.jpg";
 import { PlaySVG } from "../../assets/assets.js";
 
-const HomePage = ({ toggleModalHidden }) => {
+const HomePage = ({ setModalHidden }) => {
   useEffect(() => {
     ScrollTriggerAnimations();
-  }, []);
+    setModalHidden(true);
+  },);
 
   const [showModal, setShowModal] = useState(false);
 
   const toggleModal = () => {
     setShowModal(!showModal);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    toggleModalHidden();
   };
 
   return (
@@ -57,7 +63,7 @@ const HomePage = ({ toggleModalHidden }) => {
       </section>
       {/* <CollectionPreview />  This is the homepage links for the store by category + everything */}
       <CollectionPreview toggleModal={toggleModal} />
-    {showModal && <ProductModal closeModal={toggleModal} />}
+    {showModal && <ProductModal closeModal={closeModal} />}
 
       <section className="section__video">
         <img src={VideoIsh} alt="video" className="video__img" />
