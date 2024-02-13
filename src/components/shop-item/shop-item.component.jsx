@@ -1,23 +1,18 @@
 import React from "react";
+import { connect } from "react-redux";
+import { updateProduct, toggleModalHidden } from "../../redux/product-modal/product-modal.actions";
 import "./shop-item.styles.scss";
-import ProductModal from "../product-modal/product-modal.component";
 
-const ShopItem = ({ item, category }) => {
+const ShopItem = ({ item, addItem, category, updateProductForModal, toggleModalHidden }) => {
   const { imageUrl, name, price } = item;
-  const [productModalOpen, setProductModalOpen] = React.useState(false);
 
-  // Function to open the product modal
-  const openProductModal = () => {
-    setProductModalOpen(true);
-  };
-
-  // Function to close the product modal
-  const closeProductModal = () => {
-    setProductModalOpen(false);
+  const handleClick = () => {
+    updateProductForModal(item);
+    toggleModalHidden();
   };
 
   return (
-    <div className="furniture-item" onClick={openProductModal}>
+    <div className="furniture-item" onClick={handleClick}>
       <div
         className="furniture-item__img"
         style={{ backgroundImage: `url(${imageUrl})` }}
@@ -28,14 +23,13 @@ const ShopItem = ({ item, category }) => {
         <p className="furniture-item__name">{name}</p>
         <p className="furniture-item__price">{`$${price}`}</p>
       </div>
-      {productModalOpen && (
-        <ProductModal
-          product={item}
-          closeModal={closeProductModal}
-        />
-      )}
     </div>
   );
 };
 
-export default ShopItem;
+const mapDispatchToProps = (dispatch) => ({
+  updateProductForModal: (item) => dispatch(updateProduct(item)),
+  toggleModalHidden: () => dispatch(toggleModalHidden()),
+});
+
+export default connect(null, mapDispatchToProps)(ShopItem);

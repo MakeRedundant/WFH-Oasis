@@ -1,27 +1,34 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { connect } from "react-redux";
 import "./homepage.scss";
 import Hero from "../../components/hero/hero.component";
+import ProductModal from "../../components/product-modal/product-modal.component.jsx";
 import FormInput from "../../components/form-input/form-input.component";
+import CollectionPreview from "../../components/collections-preview/collections-preview.component";
+import { toggleModalHidden } from "../../redux/product-modal/product-modal.actions.js";
+
 import {
   imgAbout1,
   imgAbout2,
   imgEthos1,
   imgEthos2,
 } from "../../assets/assets.js";
-import CollectionPreview from "../../components/collections-preview/collections-preview.component";
 import { ScrollTriggerAnimations } from "../../animations/animations.js";
 
 import VideoIsh from "../../assets/img/video-ish.jpg";
 import { PlaySVG } from "../../assets/assets.js";
 
-import { connect } from "react-redux";
-import { toggleModalHidden } from "../../redux/product-modal/product-modal.actions.js";
-
-const HomePage = ({ setModalHidden }) => {
+const HomePage = ({ toggleModalHidden }) => {
   useEffect(() => {
     ScrollTriggerAnimations();
-    setModalHidden(true);
-  });
+  }, []);
+
+  const [showModal, setShowModal] = useState(false);
+
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
+
   return (
     <>
       <Hero /> 
@@ -48,7 +55,9 @@ const HomePage = ({ setModalHidden }) => {
           </div>
         </div>
       </section>
-      <CollectionPreview />  {/* This is the homepage links for the store by category + everything */}
+      {/* <CollectionPreview />  This is the homepage links for the store by category + everything */}
+      <CollectionPreview toggleModal={toggleModal} />
+    {showModal && <ProductModal closeModal={toggleModal} />}
 
       <section className="section__video">
         <img src={VideoIsh} alt="video" className="video__img" />
@@ -95,7 +104,13 @@ const HomePage = ({ setModalHidden }) => {
 };
 // export default HomePage;
 
+// const mapDispatchToProps = (dispatch) => ({
+//   setModalHidden: (value) => dispatch(toggleModalHidden(value)),
+// });
+// export default connect(null, mapDispatchToProps)(HomePage);
+
 const mapDispatchToProps = (dispatch) => ({
-  setModalHidden: (value) => dispatch(toggleModalHidden(value)),
+toggleModalHidden: () => dispatch(toggleModalHidden()),
 });
+
 export default connect(null, mapDispatchToProps)(HomePage);
