@@ -12,8 +12,8 @@ import { AddedToCartModal } from "../../animations/animations";
 
 const ShopItem = ({
   item,
-  addItem,
   category,
+  addItem,
   updateProductForModal,
   toggleModalHidden,
 }) => {

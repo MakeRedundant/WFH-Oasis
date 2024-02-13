@@ -116,7 +116,7 @@ const HomePage = ({ setModalHidden }) => {
 // export default connect(null, mapDispatchToProps)(HomePage);
 
 const mapDispatchToProps = (dispatch) => ({
-toggleModalHidden: () => dispatch(toggleModalHidden()),
+setModalHidden: () => dispatch(toggleModalHidden()),
 });
 
 export default connect(null, mapDispatchToProps)(HomePage);

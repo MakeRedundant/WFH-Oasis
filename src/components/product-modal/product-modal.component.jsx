@@ -6,7 +6,6 @@ import { selectProductForModal } from "../../redux/product-modal/product-modal.s
 import { toggleModalHidden } from "../../redux/product-modal/product-modal.actions";
 import { addItem } from "../../redux/cart/cart.actions";
 import { AddedToCartModal as addedToCartModal } from "../../animations/animations";
-
 const ProductModal = ({ product, toggleModalHidden, addItemToCart }) => {
   console.log(product);
   return (
@@ -33,9 +32,8 @@ const ProductModal = ({ product, toggleModalHidden, addItemToCart }) => {
           alt="product"
         />
         <div className="product-modal__details">
-          <p className="product-modal__product-name">{`${
-            product.name
-          } ${product.category.slice(0, -1)}`}</p>
+        <p className="product-modal__product-name">{`${product.name} ${product.category ? product.category.slice(0, -1) : ''}`}</p>
+
           <p className="product-modal__description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, labore
             eum! Tenetur impedit tempora corporis inventore perferendis. Saepe
