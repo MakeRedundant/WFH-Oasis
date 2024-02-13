@@ -1,56 +1,41 @@
 import React from "react";
-import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 import "./shop-item.styles.scss";
+import ProductModal from "../product-modal/product-modal.component";
 
-import { addItem } from "../../redux/cart/cart.actions";
-import {
-  updateProduct,
-  toggleModalHidden,
-} from "../../redux/product-modal/product-modal.actions";
-import { AddedToCartModal } from "../../animations/animations";
-
-// import productModalComponent from "../product-modal/product-modal.component";
-
-const ShopItem = ({
-  item,
-  addItem,
-  category,
-  updateProductForModal,
-  toggleModalHidden,
-}) => {
+const ShopItem = ({ item, category }) => {
   const { imageUrl, name, price } = item;
+  const [productModalOpen, setProductModalOpen] = React.useState(false);
+
+  // Function to open the product modal
+  const openProductModal = () => {
+    setProductModalOpen(true);
+  };
+
+  // Function to close the product modal
+  const closeProductModal = () => {
+    setProductModalOpen(false);
+  };
 
   return (
-    <div
-      className="furniture-item"
-      onClick={() => {
-        // addItem(item);
-        // AddedToCartModal();
-        updateProductForModal(item);
-        toggleModalHidden(true);
-      }}
-    >
+    <div className="furniture-item" onClick={openProductModal}>
       <div
         className="furniture-item__img"
-        style={{
-          backgroundImage: `url(${imageUrl})`,
-        }}
+        style={{ backgroundImage: `url(${imageUrl})` }}
       />
       <div className="button-container"></div>
       <p className="furniture-item__category">{category}</p>
-
       <div className="furniture-item__details">
         <p className="furniture-item__name">{name}</p>
         <p className="furniture-item__price">{`$${price}`}</p>
       </div>
+      {productModalOpen && (
+        <ProductModal
+          product={item}
+          closeModal={closeProductModal}
+        />
+      )}
     </div>
   );
 };
 
-const mapDispatchToProps = (dispatch) => ({
-  addItem: (item) => dispatch(addItem(item)),
-  updateProductForModal: (item) => dispatch(updateProduct(item)),
-  toggleModalHidden: (payload) => dispatch(toggleModalHidden(payload)),
-});
-export default connect(null, mapDispatchToProps)(ShopItem);
+export default ShopItem;
