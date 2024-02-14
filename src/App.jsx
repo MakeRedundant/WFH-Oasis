@@ -42,8 +42,8 @@ function App() {
           <Route path="/login" element={<LogIn />} />
           <Route path="/signup" element={<SignUp />} />
           <Route
-          path={["/collections/*", "/category/*"]}
-          element={<ProductModal />}
+          // path={["/collections/*", "/category/*"]}
+          // element={<ProductModal />}
         />
         </Routes>
         {/* <ProductModal /> */}
