@@ -4,14 +4,14 @@ import Homepage from './pages/homepage/homepage';
 import Header from './components/header/header';
 import Footer from "./components/footer/footer";
 
-//Modals
+//Modal for product
 import ProductModal from './components/product-modal/product-modal.component';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
 
-
+// Shopping categories
 import Everything from "./pages/shop/everything.component";
 import Chairs from "./pages/shop/chairs.component";
 import Sofas from "./pages/shop/sofas.component";
@@ -20,6 +20,7 @@ import Lights from "./pages/shop/lights.component";
 import Ottomans from "./pages/shop/ottomans.component";
 import Checkout from "./pages/checkout/checkout.component";
 
+//Login and Signup page
 import LogIn from "./pages/Log-in/log-in.component";
 import SignUp from "./pages/sign-up/sign-up.component";
 
@@ -40,7 +41,10 @@ function App() {
           <Route path="*" element={<Homepage />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/signup" element={<SignUp />} />
-          
+          <Route
+          path={["/collections/*", "/category/*"]}
+          element={<ProductModal />}
+        />
         </Routes>
         {/* <ProductModal /> */}
         <Footer />
