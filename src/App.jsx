@@ -37,13 +37,13 @@ function App() {
   const toggleModal = () => {
     setShowModal(!showModal);
     // Dispatch action to toggle modal state
-    store.dispatch(toggleModalHidden(!showModal));
+    store.dispatch(toggleModalHidden());
   };
 
   const closeModal = () => {
     setShowModal(false);
     // Dispatch action to hide modal
-    store.dispatch(toggleModalHidden(false));
+    store.dispatch(toggleModalHidden());
   };
 
   return (
