@@ -25,7 +25,7 @@ const ShopItem = ({
     addItem(item);
     AddedToCartModal();
     updateProductForModal(item);
-    toggleModalHidden();
+    toggleModalHidden(false);
   };
 
   return (
@@ -53,6 +53,7 @@ const ShopItem = ({
 const mapStateToProps = (state) => ({
   showModal: state.productModal ? state.productModal.hidden : false,
 });
+
 
 
 const mapDispatchToProps = (dispatch) => ({

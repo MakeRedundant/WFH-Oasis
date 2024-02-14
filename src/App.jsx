@@ -4,8 +4,14 @@ import Homepage from './pages/homepage/homepage';
 import Header from './components/header/header';
 import Footer from "./components/footer/footer";
 
+import { useEffect, useState } from "react";
+
 //Modal for product
 import ProductModal from './components/product-modal/product-modal.component';
+
+// Import action to toggle modal
+import { toggleModalHidden } from './redux/product-modal/product-modal.actions';
+
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -25,6 +31,21 @@ import LogIn from "./pages/Log-in/log-in.component";
 import SignUp from "./pages/sign-up/sign-up.component";
 
 function App() {
+
+  const [showModal, setShowModal] = useState(false);
+
+  const toggleModal = () => {
+    setShowModal(!showModal);
+    // Dispatch action to toggle modal state
+    store.dispatch(toggleModalHidden(!showModal));
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    // Dispatch action to hide modal
+    store.dispatch(toggleModalHidden(false));
+  };
+
   return (
     <Provider store={store}>
       <Router>
@@ -41,12 +62,9 @@ function App() {
           <Route path="*" element={<Homepage />} />
           <Route path="/login" element={<LogIn />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route
-          // path={["/collections/*", "/category/*"]}
-          // element={<ProductModal />}
-        />
         </Routes>
-        {/* <ProductModal /> */}
+        {/* Render ProductModal only when showModal is true */}
+        {showModal && <ProductModal closeModal={closeModal} />}
         <Footer />
       </Router>
     </Provider>

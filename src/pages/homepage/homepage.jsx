@@ -28,12 +28,16 @@ const HomePage = ({ setModalHidden }) => {
 
   const toggleModal = () => {
     setShowModal(!showModal);
+    // Dispatch action to toggle modal state
+    store.dispatch(toggleModalHidden(!showModal));
   };
 
   const closeModal = () => {
     setShowModal(false);
-    toggleModalHidden();
+    // Dispatch action to hide modal
+    store.dispatch(toggleModalHidden(false));
   };
+
 
   return (
     <>
