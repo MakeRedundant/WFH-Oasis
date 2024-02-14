@@ -20,8 +20,8 @@ import Lights from "./pages/shop/lights.component";
 import Ottomans from "./pages/shop/ottomans.component";
 import Checkout from "./pages/checkout/checkout.component";
 
-// import LogIn from "./pages/Log-in/log-in.component";
-// import SignUp from "./pages/sign-up/sign-up.component";
+import LogIn from "./pages/Log-in/log-in.component";
+import SignUp from "./pages/sign-up/sign-up.component";
 
 function App() {
   return (
@@ -38,8 +38,8 @@ function App() {
           <Route path="/category/ottomans" element={<Ottomans />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="*" element={<Homepage />} />
-          {/* <Route path="/login" element={<LogIn />} />
-          <Route path="/signup" element={<SignUp />} /> */}
+          <Route path="/login" element={<LogIn />} />
+          <Route path="/signup" element={<SignUp />} />
           
         </Routes>
         {/* <ProductModal /> */}

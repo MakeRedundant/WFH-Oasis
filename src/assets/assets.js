@@ -49,6 +49,11 @@ const menuImages = {
   fourth: "./img/menu-4.jpg",
 };
 
+const menu1 = "./img/menu-1.jpg";
+const menu2 = "./img/menu-2.jpg";
+const menu3 = "./img/menu-3.jpg";
+const menu4 = "./img/menu-4.jpg";
+
 const VideoIsh = "./img/video-ish.jpg";
 const PlaySVG = "./svg/play-button.svg";
 
@@ -69,6 +74,10 @@ export {
   imgOtto,
   iconArrow,
   logo,
+  menu1,
+  menu2,
+  menu3,
+  menu4,
   menuImages,
   VideoIsh,
   PlaySVG

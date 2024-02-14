@@ -21,38 +21,38 @@ class LogIn extends React.Component {
     };
   }
 
-  handleSubmit = async (event) => {
-    event.preventDefault();
-    const { email, password } = this.state;
-    this.setState({ email: "", password: "" });
+  // handleSubmit = async (event) => {
+  //   event.preventDefault();
+  //   const { email, password } = this.state;
+  //   this.setState({ email: "", password: "" });
 
-    try {
-      await (email, password);
-      this.state = {
-        email: "",
-        password: "",
-      };
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  //   try {
+  //     await auth.signInWithEmailAndPassword(email, password);
+  //     this.state = {
+  //       email: "",
+  //       password: "",
+  //     };
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
-  handleChange = (event) => {
-    const { value, name } = event.target;
-    this.setState({ [name]: value });
-    // console.log(this.state);
-  };
+  // handleChange = (event) => {
+  //   const { value, name } = event.target;
+  //   this.setState({ [name]: value });
+  //   // console.log(this.state);
+  // };
 
   render() {
     return (
       <div className="logIn">
         <div className="left">
-          <Link to="/#">
+          {/* <Link to="/login">
             {" "}
             <img src={logo} alt="logo" className="header__logo" />
-          </Link>
-          <form className="group" onSubmit={this.handleSubmit}>
-            <h2>Good to see you again!</h2>
+          </Link> */}
+          <form className="group">
+            <h2>Welcome back home!</h2>
             <FormInput
               type="email"
               placeholder="Email"
@@ -71,7 +71,7 @@ class LogIn extends React.Component {
             />
             <CustomButton>Login</CustomButton>
             Or
-            <CustomButton isGoogleSignIn onClick={signInWithGoogle}>
+            <CustomButton isGoogleSignIn>
               <div className="container">
                 <img src={googleLogo} alt="" />
                 <span className="btn-txt">Continue with Google</span>
@@ -80,7 +80,7 @@ class LogIn extends React.Component {
           </form>
 
           <p className="login__cta">
-            Don't have an account? <Link to="/signup">Sign up now.</Link>
+            Don&apos;t have an account? <Link to="/signup">Sign up now.</Link>
           </p>
         </div>
 

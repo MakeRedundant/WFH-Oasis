@@ -10,11 +10,11 @@ import { logo } from "../../assets/assets";
 
 import { Link } from "react-router-dom";
 
-import {
-  auth,
-  createUserProfileDocument,
-  signInWithGoogle,
-} from "../../firebase/firebase.utils";
+// import {
+//   auth,
+//   createUserProfileDocument,
+//   signInWithGoogle,
+// } from "../../firebase/firebase.utils";
 
 class SignUp extends React.Component {
   constructor(props) {
@@ -69,10 +69,10 @@ class SignUp extends React.Component {
     return (
       <div className="signup">
         <div className="left">
-          <Link to="/#">
+          {/* <Link to="/#">
             {" "}
             <img src={logo} alt="logo" className="header__logo" />
-          </Link>
+          </Link> */}
           <form className="group" onSubmit={this.handleSubmit}>
             <h2>Sign Up</h2>
             <FormInput
@@ -105,7 +105,7 @@ class SignUp extends React.Component {
             />
             <CustomButton type="submit">Signup</CustomButton>
             Or
-            <CustomButton onClick={signInWithGoogle} isGoogleSignIn>
+            <CustomButton>
               <div className="container">
                 <img src={googleLogo} alt="" />
                 <span className="btn-txt">Continue with Google</span>

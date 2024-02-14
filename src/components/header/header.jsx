@@ -12,7 +12,13 @@ import { selectCartHidden } from "../../redux/cart/cart.selectors";
 import CartIcon from "../cart-icon/cart-icon.component";
 import CartPreview from "../cart-preview/cart-preview.component";
 import logos from "../../assets/img/CELESTIAL.png";
-import { menuImages } from "../../assets/assets";
+// import { menuImages } from "../../assets/assets";
+
+import menu1 from "../../assets/img/menu-1.jpg";
+import menu2 from "../../assets/img/menu-2.jpg"
+import menu3 from "../../assets/img/menu-3.jpg"
+import menu4 from "../../assets/img/menu-4.jpg"
+
 import Modal from "../modal/added-to-cart.component";
 
 const Header = ({ hidden }) => {
@@ -38,7 +44,7 @@ const Header = ({ hidden }) => {
         <Link to="/#" className="header__item anim__hide">
           About
         </Link>
-        <Link to="/#" className="header__item anim__hide">
+        <Link to="/login" className="header__item anim__hide">
           Login
         </Link>
         <CartIcon />
@@ -53,30 +59,10 @@ const Header = ({ hidden }) => {
       <nav className="menu-nav">
         <div className="menu-nav__left">
           <div className="menu-nav__left--imgs">
-            <img
-              src={menuImages.first}
-              alt=""
-              id="1"
-              className="menu-nav__left--img"
-            />
-            <img
-              src={menuImages.second}
-              alt=""
-              id="2"
-              className="menu-nav__left--img"
-            />
-            <img
-              src={menuImages.third}
-              alt=""
-              id="3"
-              className="menu-nav__left--img"
-            />
-            <img
-              src={menuImages.fourth}
-              alt=""
-              id="4"
-              className="menu-nav__left--img"
-            />
+            <img src={menu1} alt="" id="1" className="menu-nav__left--img" />
+            <img src={menu2} alt="" id="2" className="menu-nav__left--img" />
+            <img src={menu3} alt="" id="3" className="menu-nav__left--img" />
+            <img src={menu4} alt="" id="4" className="menu-nav__left--img" />
           </div>
         </div>
 
