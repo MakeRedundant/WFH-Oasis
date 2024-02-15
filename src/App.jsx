@@ -32,19 +32,19 @@ import SignUp from "./pages/sign-up/sign-up.component";
 
 function App() {
 
-  const [showModal, setShowModal] = useState(false);
+  // const [showModal, setShowModal] = useState(false);
 
-  const toggleModal = () => {
-    setShowModal(!showModal);
-    // Dispatch action to toggle modal state
-    store.dispatch(toggleModalHidden());
-  };
+  // const toggleModal = () => {
+  //   setShowModal(!showModal);
+  //   // Dispatch action to toggle modal state
+  //   store.dispatch(toggleModalHidden());
+  // };
 
-  const closeModal = () => {
-    setShowModal(false);
-    // Dispatch action to hide modal
-    store.dispatch(toggleModalHidden());
-  };
+  // const closeModal = () => {
+  //   setShowModal(false);
+  //   // Dispatch action to hide modal
+  //   store.dispatch(toggleModalHidden());
+  // };
 
   return (
     <Provider store={store}>
@@ -64,7 +64,8 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
         </Routes>
         {/* Render ProductModal only when showModal is true */}
-        {showModal && <ProductModal closeModal={closeModal} />}
+        {/* {showModal && <ProductModal closeModal={closeModal} />} */}
+
         <Footer />
       </Router>
     </Provider>
