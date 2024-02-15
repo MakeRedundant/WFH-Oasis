@@ -7,17 +7,17 @@ import { toggleModalHidden } from "../../redux/product-modal/product-modal.actio
 import { AddedToCartModal } from "../../animations/animations";
 import ProductModal from "../product-modal/product-modal.component";
 
-const ShopItem = ({
-  item,
-  category,
-  addItem,
-  toggleModalHidden,
-}) => {
+const ShopItem = ({ item, category, addItem, toggleModalHidden }) => {
   const { imageUrl, name, price } = item;
 
-  const handleItemClick = () => {
-    toggleModalHidden();
-  }
+  const handleItemClick = (e) => {
+    e.stopPropagation();
+    console.log("Clicked item:", item);
+    toggleModalHidden(item);
+  };
+
+  console.log("Props in ShopItem:", item);
+
   return (
     <div className="furniture-item" onClick={handleItemClick}>
       <div
@@ -32,17 +32,20 @@ const ShopItem = ({
       <div className="furniture-item__details">
         <p className="furniture-item__name">{name}</p>
         <p className="furniture-item__price">{`$${price}`}</p>
-        </div>
+      </div>
 
-{/* Pass props to ProductModal */}
-<ProductModal item={item} toggleModalHidden={toggleModalHidden} addItemToCart={addItem} />
-
-</div>
+      {/* Pass props to ProductModal */}
+      <ProductModal
+        item={item}
+        toggleModalHidden={toggleModalHidden}
+        addItemToCart={addItem}
+      />
+    </div>
   );
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  toggleModalHidden: () => dispatch(toggleModalHidden()),
+  toggleModalHidden: (item) => dispatch(toggleModalHidden(item)),
   addItem: (item) => dispatch(addItem(item)),
 });
 

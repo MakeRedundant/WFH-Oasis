@@ -5,6 +5,11 @@ export const updateProduct = (item) => ({
   payload: item,
 });
 
+export const toggleModalHidden = (item) => ({
+  type: ProductDetailActionTypes.TOGGLE_MODAL_HIDDEN,
+  payload: item,
+});
+
 
 // export const toggleModalHidden = (payload) => ({
 //   type: ProductDetailActionTypes.TOGGLE_MODAL_HIDDEN,
@@ -15,7 +20,3 @@ export const updateProduct = (item) => ({
 //   type: ProductDetailActionTypes.TOGGLE_MODAL_HIDDEN,
 //   payload: isHidden,
 // });
-
-export const toggleModalHidden = () => ({
-  type: ProductDetailActionTypes.TOGGLE_MODAL_HIDDEN,
-});

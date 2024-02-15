@@ -5,10 +5,10 @@ import "./shop.styles.scss";
 import { connect } from "react-redux";
 import { toggleModalHidden } from "../../redux/product-modal/product-modal.actions";
 
-const Chairs = ({ setModalHidden }) => {
+const Chairs = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    setModalHidden(true);
+    // setModalHidden(true);
   }, []);
   return (
     <>
@@ -18,7 +18,9 @@ const Chairs = ({ setModalHidden }) => {
   );
 };
 
-const mapDispatchToProps = (dispatch) => ({
-  setModalHidden: (value) => dispatch(toggleModalHidden(value)),
-});
-export default connect(null, mapDispatchToProps)(Chairs);
+// const mapDispatchToProps = (dispatch) => ({
+//   setModalHidden: (value) => dispatch(toggleModalHidden(value)),
+// });
+// export default connect(null, mapDispatchToProps)(Chairs);
+
+export default Chairs;

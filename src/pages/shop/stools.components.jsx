@@ -4,10 +4,10 @@ import ItemsShowcase from "../../components/showcase/showcase.component";
 import "./shop.styles.scss";
 import { connect } from "react-redux";
 import { toggleModalHidden } from "../../redux/product-modal/product-modal.actions";
-const Stools = ({ setModalHidden }) => {
+const Stools = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-    setModalHidden(true);
+    // setModalHidden(true);
   }, []);
 
   return (
@@ -17,7 +17,9 @@ const Stools = ({ setModalHidden }) => {
     </>
   );
 };
-const mapDispatchToProps = (dispatch) => ({
-  setModalHidden: (value) => dispatch(toggleModalHidden(value)),
-});
-export default connect(null, mapDispatchToProps)(Stools);
+// const mapDispatchToProps = (dispatch) => ({
+//   setModalHidden: (item) => dispatch(toggleModalHidden(item)),
+// });
+// export default connect(null, mapDispatchToProps)(Stools);
+
+export default Stools;

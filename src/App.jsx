@@ -34,16 +34,16 @@ function App() {
 
   // const [showModal, setShowModal] = useState(false);
 
-  // const toggleModal = () => {
+  // const toggleModal = (item) => {
   //   setShowModal(!showModal);
   //   // Dispatch action to toggle modal state
-  //   store.dispatch(toggleModalHidden());
+  //   store.dispatch(toggleModalHidden(item));
   // };
 
-  // const closeModal = () => {
+  // const closeModal = (item) => {
   //   setShowModal(false);
   //   // Dispatch action to hide modal
-  //   store.dispatch(toggleModalHidden());
+  //   store.dispatch(toggleModalHidden(item));
   // };
 
   return (
@@ -64,8 +64,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
         </Routes>
         {/* Render ProductModal only when showModal is true */}
-        {/* {showModal && <ProductModal closeModal={closeModal} />} */}
-
+        {/* <ProductModal closeModal={closeModal} /> */}
         <Footer />
       </Router>
     </Provider>
