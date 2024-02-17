@@ -36,9 +36,7 @@ const ProductModal = ({ item, toggleModalHidden, addItemToCart, hidden, updatePr
         </button>
         <img className="product-modal__img" src={imageUrl} alt="product" />
         <div className="product-modal__details">
-          <p className="product-modal__product-name">{`${name} ${
-            category ? category.slice(0, -1) : ""
-          }`}</p>
+          <p className="product-modal__product-name">{`${name}`}</p>
           <p className="product-modal__description">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, labore
             eum! Tenetur impedit tempora corporis inventore perferendis. Saepe
