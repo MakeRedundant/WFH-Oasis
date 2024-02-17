@@ -335,7 +335,7 @@ const SHOP_DATA = {
       },
       {
         id: 43,
-        name: "Cerburus",
+        name: "Memo board",
         category: "Ottomans",
         imageUrl: "https://i.ibb.co/Bw55qtn/cerburus.jpg ",
         price: 19,
