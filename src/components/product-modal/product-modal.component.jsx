@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { toggleModalHidden } from "../../redux/product-modal/product-modal.actions";
+import { toggleModalHidden, updateProduct } from "../../redux/product-modal/product-modal.actions";
 import { addItem } from "../../redux/cart/cart.actions";
-import { createStructuredSelector } from "reselect";
-import { selectProductForModal } from "../../redux/product-modal/product-modal.selector";
+import { selectModalHidden, selectProductForModal } from "../../redux/product-modal/product-modal.selector";
 import { AddedToCartModal } from "../../animations/animations";
 import "./product-modal.styles.scss";
 
-const ProductModal = ({ item, toggleModalHidden, addItemToCart, hidden }) => {
+const ProductModal = ({ item, toggleModalHidden, addItemToCart, hidden, updateProduct }) => {
   console.log("Item in ProductModal:", item);
+  
+  useEffect(() => {
+    if (item) {
+      updateProduct(item);
+    }
+  }, [item, updateProduct]);
+  
   if (hidden || !item) return null; // Return null if hidden or no item
 
   const { imageUrl, name, category, price } = item;
@@ -60,12 +66,14 @@ const ProductModal = ({ item, toggleModalHidden, addItemToCart, hidden }) => {
 };
 
 const mapStateToProps = (state) => ({
-  hidden: state.productForModal.hidden,
+  hidden: selectModalHidden(state),
+  item: selectProductForModal(state),
 });
 
 const mapDispatchToProps = (dispatch) => ({
   toggleModalHidden: (item) => dispatch(toggleModalHidden(item)),
   addItemToCart: (item) => dispatch(addItem(item)),
+  updateProduct: (item) => dispatch(updateProduct(item)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProductModal);
