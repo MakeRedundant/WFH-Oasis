@@ -50,12 +50,11 @@ const HomePage = () => {
             </h2>
             <p className="paragraph">
               Here at Oasis we know the struggles of juggling home and office
-              life. So why not do both? We turn your home into a office fit for a
-              king and your office into your second home. I believe everyone
-              deserves a space that fuels their creativity, boosts their
-              productivity, and promotes well-being. Through expert tips,
-              insightful guides, and inspiring examples, Oasis will be your
-              one-stop shop for turning any space into your personal paradise.
+              life. So why not both? We turn your home into a office fit for a
+              king and your office into your second home. Everyone
+              deserves a space that fuels their creativity and boosts their
+              productivity. Oasis will be your
+              one-stop shop for turning any space into your personal paradise 🌴
             </p>
           </div>
 
@@ -68,7 +67,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      {/* <CollectionPreview />  This is the homepage links for the store by category + everything */}
+      {/* This is the homepage links for the store by category + everything */}
       <CollectionPreview />
 
       <section className="section__video">
@@ -91,11 +90,10 @@ const HomePage = () => {
           <div className="ethos__content--text">
             <p className="title">Our ethos</p>
             <h2 className="title__sub">
-              <span>Effortlessly</span> Grande Homes
+              <span>Your happy place</span>
             </h2>
             <p className="paragraph">
-              Making luxurious and truly grande furniture accessible for all
-              people is our daily drive.
+              Your home and office is where you spend most of your working lives, so why not make it your castle?
             </p>
           </div>
         </div>
@@ -103,7 +101,7 @@ const HomePage = () => {
       <section className="section__newsletter">
         <p className="title">Newsletter</p>
         <h2 className="title__sub">
-          <span>Subscribe</span> to get the latest updates
+          <span>Subscribe</span> to turn your home and office into a Oasis
         </h2>
 
         <form action="" className="newsletter__form">

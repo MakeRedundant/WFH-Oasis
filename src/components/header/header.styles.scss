@@ -21,11 +21,11 @@
   }
 
   &__logo {
-    width: 10vw;
+    width: 7vw;
     height: auto;
 
     @include respond(phone) {
-      width: 32vw;
+      width: 27vw;
     }
   }
   &__right {

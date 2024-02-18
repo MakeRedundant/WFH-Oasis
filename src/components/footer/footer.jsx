@@ -1,6 +1,5 @@
-import React from "react";
 import "./footer.scss";
-import logo from "../../assets/svg/logo-white.svg";
+import logo from "../../assets/img/Logo.png";
 import facebook from "../../assets/svg/facebook.svg";
 import Instagram from "../../assets/svg/instagram.svg";
 import Pinterest from "../../assets/svg/pinterest.svg";
@@ -34,6 +33,9 @@ const Footer = () => (
               className="footer__socials--img"
             />
           </Link>
+          <div className="footer_credit">
+            <p>Made by Brian Trang @ 2024</p>
+          </div>
         </div>
       </div>
     </div>

@@ -40,7 +40,7 @@ const imgOtto = {
 };
 
 const iconArrow = "./img/arrow-down.png";
-const logo = "./img/CELESTIAL.png";
+const logo = "./img/Logo.png";
 
 const menuImages = {
   first: "./img/menu-1.jpg",

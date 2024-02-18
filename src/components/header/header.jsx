@@ -11,8 +11,7 @@ import { createStructuredSelector } from "reselect";
 import { selectCartHidden } from "../../redux/cart/cart.selectors";
 import CartIcon from "../cart-icon/cart-icon.component";
 import CartPreview from "../cart-preview/cart-preview.component";
-import logos from "../../assets/img/CELESTIAL.png";
-// import { menuImages } from "../../assets/assets";
+import logos from "../../assets/img/Logo.png";
 
 import menu1 from "../../assets/img/menu-1.jpg";
 import menu2 from "../../assets/img/menu-2.jpg"
@@ -32,14 +31,14 @@ const Header = ({ hidden }) => {
     <div className="header">
       <Link to="/#" className="anim__hide">
         {" "}
-        <img src={logos} alt="logo" className="header__logo " />
+        <img src={logos} alt="logo" className="header__logo "/>
       </Link>
       <div className="header__right">
         <Link to="/#" className="header__item anim__hide ">
           Home
         </Link>
         <Link to="/collections" className="header__item anim__hide">
-          Collection
+          Shopping
         </Link>
         <Link to="/#" className="header__item anim__hide">
           About
@@ -73,7 +72,10 @@ const Header = ({ hidden }) => {
 
           <div className="menu-nav__main">
             <Link to="/#" className="menu-link">
-              <h2 id="1" className="menu-nav__link">
+              <h2 id="1" className="menu-nav__link"
+              style={ {
+                paddingTop: "20%"
+              }}>
                 Home
               </h2>
             </Link>

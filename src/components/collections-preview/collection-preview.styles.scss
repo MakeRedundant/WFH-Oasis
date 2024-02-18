@@ -76,6 +76,8 @@
     color: $color-secondary;
     letter-spacing: 0.1em;
     transition: letter-spacing 0.3s ease;
+    font-size: 3rem;
+    display: block;
 
     &:hover {
       letter-spacing: 0.2em;
