@@ -3,17 +3,16 @@ import ShopTile from "../../components/shop-title/shop-title.component";
 import ItemsShowcase from "../../components/showcase/showcase.component";
 import "./shop.styles.scss";
 
-const Everything = () => {
+const Desks = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   return (
     <>
-      <ShopTile category="Everything" />
-      <ItemsShowcase itemsToRender="all" />
+      <ShopTile category="Desks" />
+      <ItemsShowcase category="Desks" itemsToRender={3} filtered />
     </>
   );
 };
 
-export default Everything;
+export default Desks;

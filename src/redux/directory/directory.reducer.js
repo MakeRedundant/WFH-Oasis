@@ -10,15 +10,15 @@ const INITIAL_STATE = {
     },
     {
       id: 3,
-      urlTitle: "sofas",
+      urlTitle: "desks",
     },
     {
       id: 4,
-      urlTitle: "stools",
+      urlTitle: "technology",
     },
     {
       id: 5,
-      urlTitle: "ottomans",
+      urlTitle: "others",
     },
   ],
 };

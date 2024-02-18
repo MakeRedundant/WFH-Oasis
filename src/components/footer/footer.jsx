@@ -42,10 +42,10 @@ const Footer = () => (
       <div className="footer__group align-right">
         <Link to="/category/everything" className="footer__group--title">shop</Link>
         <Link to="/category/chairs"className="footer__group--link">Chairs</Link>
-        <Link to="/category/sofas"className="footer__group--link">Sofas</Link>
-        <Link to="/category/stools"className="footer__group--link">stools</Link>
+        <Link to="/category/desks"className="footer__group--link">Desks</Link>
+        <Link to="/category/technology"className="footer__group--link">Technology</Link>
         <Link to="/category/lights"className="footer__group--link">lights</Link>
-        <Link to="/category/ottomans"className="footer__group--link">Ottomans</Link>
+        <Link to="/category/others"className="footer__group--link">Others</Link>
       </div>
       <div className="footer__group align-right">
         <Link to="/"className="footer__group--title">Navigate</Link>
