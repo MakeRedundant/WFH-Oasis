@@ -7,7 +7,6 @@
   background-color: $color-bg;
   display: flex;
   flex-direction: row;
-
   @include respond(phone) {
     flex-direction: column;
   }
@@ -101,8 +100,3 @@
     }
   }
 }
-
-// .container {
-//   width: 1.2rem;
-
-// }

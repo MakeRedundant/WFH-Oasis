@@ -6,8 +6,6 @@ import CustomButton from "../../components/custom-button/custom-button.component
 import googleLogo from "../../assets/svg/google.svg";
 import banner from "../../assets/img/login-banner.jpg";
 
-import { logo } from "../../assets/assets";
-
 import { Link } from "react-router-dom";
 
 // import {
@@ -105,7 +103,7 @@ class SignUp extends React.Component {
             />
             <CustomButton type="submit">Signup</CustomButton>
             Or
-            <CustomButton>
+            <CustomButton isGoogleSignIn>
               <div className="container">
                 <img src={googleLogo} alt="" />
                 <span className="btn-txt">Continue with Google</span>
@@ -123,6 +121,7 @@ class SignUp extends React.Component {
             backgroundImage: `url(${banner})`,
             backgroundSize: "cover",
             width: "46vw",
+            marginLeft: "auto",
           }}
         />
       </div>
