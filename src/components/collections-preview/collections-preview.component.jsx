@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { InitPreviewAnimation } from "../../animations/animations";
 import "./collection-preview.styles.scss";
 import { Link } from "react-router-dom";
+
 import {
   imgChair,
   imgLight,

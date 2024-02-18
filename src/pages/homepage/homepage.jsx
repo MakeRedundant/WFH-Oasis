@@ -22,7 +22,7 @@ const HomePage = () => {
   useEffect(() => {
     ScrollTriggerAnimations();
     // setModalHidden(true);
-  },);
+  });
 
   // const [showModal, setShowModal] = useState(false);
 
@@ -38,21 +38,24 @@ const HomePage = () => {
   //   store.dispatch(toggleModalHidden(false));
   // };
 
-
   return (
     <>
-      <Hero /> 
+      <Hero />
       <section className="section__about anim-content">
         <div className="about__content ">
           <div className="about__content--text">
             <p className="title">Who We Are</p>
             <h2 className="title__sub">
-              <span>True</span> furniture Masters
+              <span>True</span> Office/Home Masters
             </h2>
             <p className="paragraph">
-              We are a collaboration of emerging and iconic designers and
-              makers. Each object was designed to bring quality and style to
-              your everyday rituals.
+              Here at Oasis we know the struggles of juggling home and office
+              life. So why not do both? We turn your home into a office fit for a
+              king and your office into your second home. I believe everyone
+              deserves a space that fuels their creativity, boosts their
+              productivity, and promotes well-being. Through expert tips,
+              insightful guides, and inspiring examples, Oasis will be your
+              one-stop shop for turning any space into your personal paradise.
             </p>
           </div>
 
@@ -67,7 +70,6 @@ const HomePage = () => {
       </section>
       {/* <CollectionPreview />  This is the homepage links for the store by category + everything */}
       <CollectionPreview />
-    {/* {showModal && <ProductModal closeModal={closeModal} />} */}
 
       <section className="section__video">
         <img src={VideoIsh} alt="video" className="video__img" />
@@ -99,7 +101,7 @@ const HomePage = () => {
         </div>
       </section>
       <section className="section__newsletter">
-        <p className="title">newsletter</p>
+        <p className="title">Newsletter</p>
         <h2 className="title__sub">
           <span>Subscribe</span> to get the latest updates
         </h2>
