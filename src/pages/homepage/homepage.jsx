@@ -5,6 +5,7 @@ import Hero from "../../components/hero/hero.component";
 import ProductModal from "../../components/product-modal/product-modal.component.jsx";
 import FormInput from "../../components/form-input/form-input.component";
 import CollectionPreview from "../../components/collections-preview/collections-preview.component";
+import ScrollButton from "../../components/UI/ScrollButton.jsx";
 import { toggleModalHidden } from "../../redux/product-modal/product-modal.actions.js";
 
 import {
@@ -13,6 +14,7 @@ import {
   imgEthos1,
   imgEthos2,
 } from "../../assets/assets.js";
+
 import { ScrollTriggerAnimations } from "../../animations/animations.js";
 
 import VideoIsh from "../../assets/img/video-ish.jpg";
@@ -109,6 +111,7 @@ const HomePage = () => {
           <button>Subscribe</button>
         </form>
       </section>
+      <ScrollButton />
     </>
   );
 };

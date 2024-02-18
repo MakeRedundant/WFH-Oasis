@@ -1,8 +1,6 @@
 import "./footer.scss";
 import logo from "../../assets/img/Logo.png";
-import facebook from "../../assets/svg/facebook.svg";
-import Instagram from "../../assets/svg/instagram.svg";
-import Pinterest from "../../assets/svg/pinterest.svg";
+import { FaLinkedin, FaGithub, FaGlobe } from 'react-icons/fa';
 
 import { Link } from "react-router-dom";
 
@@ -12,27 +10,15 @@ const Footer = () => (
       <div className="footer__group">
         <img src={logo} alt="logo" className="footer__logo" />
         <div className="footer__socials">
-          <Link to="/#" className="footer__socials--link">
-            <img
-              src={facebook}
-              alt="facebook"
-              className="footer__socials--img"
-            />
-          </Link>
-          <Link to="/#" className="footer__socials--link">
-            <img
-              src={Instagram}
-              alt="facebook"
-              className="footer__socials--img"
-            />
-          </Link>
-          <Link to="/#" className="footer__socials--link">
-            <img
-              src={Pinterest}
-              alt="facebook"
-              className="footer__socials--img"
-            />
-          </Link>
+          <a href="https://www.linkedin.com/in/brian-t-webdeveloper/" className="footer__socials--link" target="_blank" rel="noopener noreferrer">
+            <FaLinkedin className="footer__socials--icon" />
+          </a>
+          <a href="https://github.com/MakeRedundant" className="footer__socials--link" target="_blank" rel="noopener noreferrer">
+            <FaGithub className="footer__socials--icon" />
+          </a>
+          <a href="https://brian-trang-portfolio.netlify.app/" className="footer__socials--link" target="_blank" rel="noopener noreferrer">
+            <FaGlobe className="footer__socials--icon" />
+          </a>
           <div className="footer_credit">
             <p>Made by Brian Trang @ 2024</p>
           </div>
