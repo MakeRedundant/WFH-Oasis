@@ -15,27 +15,11 @@ import {
 import { ScrollTriggerAnimations } from "../../animations/animations.js";
 
 import VideoIsh from "../../assets/img/video-ish.jpg";
-import { PlaySVG } from "../../assets/assets.js";
 
 const HomePage = () => {
   useEffect(() => {
     ScrollTriggerAnimations();
-    // setModalHidden(true);
   });
-
-  // const [showModal, setShowModal] = useState(false);
-
-  // const toggleModal = () => {
-  //   setShowModal(!showModal);
-  //   // Dispatch action to toggle modal state
-  //   store.dispatch(toggleModalHidden(!showModal));
-  // };
-
-  // const closeModal = () => {
-  //   setShowModal(false);
-  //   // Dispatch action to hide modal
-  //   store.dispatch(toggleModalHidden(false));
-  // };
 
   return (
     <>
@@ -71,10 +55,6 @@ const HomePage = () => {
 
       <section className="section__video">
         <img src={VideoIsh} alt="video" className="video__img" />
-{/* 
-        <div className="blur">
-          <img src={PlaySVG} alt="" className="play" />
-        </div> */}
       </section>
 
       <section className="section__ethos anim-content">
