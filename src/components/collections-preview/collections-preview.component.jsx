@@ -26,9 +26,11 @@ import imgTech1 from "../../assets/img/tech-1.webp";
 import imgTech2 from "../../assets/img/tech-2.webp";
 import imgTech3 from "../../assets/img/tech-3.webp";
 import imgTech4 from "../../assets/img/tech-4.webp";
-// import imgOther1 from "../../assets/img/other-1.webp";
-// import imgOther2 from "../../assets/img/other-2.webp";
-// import imgOther3 from "../../assets/img/other-3.webp";
+import imgOther1 from "../../assets/img/other-1.webp";
+import imgOther2 from "../../assets/img/other-2.webp";
+import imgOther3 from "../../assets/img/other-3.webp";
+import imgOther4 from "../../assets/img/other-4.webp";
+import imgOther5 from "../../assets/img/other-5.webp";
 
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
@@ -110,7 +112,7 @@ const CollectionPreview = ({ collections }) => {
             }}
             id="4"
           />
-            <img
+          <img
             alt="Webcam"
             src={imgTech4}
             className="img__small"
@@ -123,17 +125,17 @@ const CollectionPreview = ({ collections }) => {
             id="4"
           />
           <img
-            alt=""
-            src={imgOtto.third}
+            alt="Label printer"
+            src={imgOther3}
             className="img__small"
             style={{ bottom: "20%", left: "20%", opacity: "0" }}
             id="5"
           />
           <img
-            alt=""
-            src={imgOtto.second}
+            alt="Memo board"
+            src={imgOther2}
             className="img__small"
-            style={{ left: "50%", top: "12%", opacity: "0" }}
+            style={{ left: "60%", top: "12%", opacity: "0" }}
             id="5"
           />
         </div>
@@ -214,12 +216,36 @@ const CollectionPreview = ({ collections }) => {
             id="4"
           />{" "}
           <img
-            alt=""
-            src={imgOtto.first}
+            alt="Colour file organiser"
+            src={imgOther1}
             className="img__large"
             style={{
               top: "5%",
               right: "50%",
+              transform: "translateX(50%)",
+              opacity: "0",
+            }}
+            id="5"
+          />
+          <img
+            alt="T2 Mango"
+            src={imgOther4}
+            className="img__small"
+            style={{
+              top: "80%",
+              right: "70%",
+              transform: "translateX(50%)",
+              opacity: "0",
+            }}
+            id="5"
+          />
+          <img
+            alt="T2 Mango"
+            src={imgOther5}
+            className="img__small"
+            style={{
+              top: "80%",
+              right: "25%",
               transform: "translateX(50%)",
               opacity: "0",
             }}
