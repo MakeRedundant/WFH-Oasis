@@ -1,12 +1,9 @@
-import { useEffect, useState } from "react";
-import { connect } from "react-redux";
+import { useEffect } from "react";
 import "./homepage.scss";
 import Hero from "../../components/hero/hero.component";
-import ProductModal from "../../components/product-modal/product-modal.component.jsx";
 import FormInput from "../../components/form-input/form-input.component";
 import CollectionPreview from "../../components/collections-preview/collections-preview.component";
 import ScrollButton from "../../components/UI/ScrollButton.jsx";
-import { toggleModalHidden } from "../../redux/product-modal/product-modal.actions.js";
 
 import {
   imgAbout1,
@@ -115,15 +112,5 @@ const HomePage = () => {
     </>
   );
 };
-// export default HomePage;
-
-// const mapDispatchToProps = (dispatch) => ({
-//   setModalHidden: (value) => dispatch(toggleModalHidden(value)),
-// });
-// export default connect(null, mapDispatchToProps)(HomePage);
-
-// const mapDispatchToProps = (dispatch) => ({
-// setModalHidden: () => dispatch(toggleModalHidden()),
-// });
 
 export default HomePage;
