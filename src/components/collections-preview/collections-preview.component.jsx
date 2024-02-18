@@ -22,12 +22,13 @@ import imgLight4 from "../../assets/img/light-4.webp";
 import imgDesk1 from "../../assets/img/desk-1.webp";
 import imgDesk2 from "../../assets/img/desk-2.webp";
 import imgDesk3 from "../../assets/img/desk-3.webp";
-// import imgTech1 from "../../assets/img/tech-1.jpg";
-// import imgTech2 from "../../assets/img/tech-2.jpg";
-// import imgTech3 from "../../assets/img/tech-3.jpg";
-// import imgOther1 from "../../assets/img/other-1.jpg";
-// import imgOther2 from "../../assets/img/other-2.jpg";
-// import imgOther3 from "../../assets/img/other-3.jpg";
+import imgTech1 from "../../assets/img/tech-1.webp";
+import imgTech2 from "../../assets/img/tech-2.webp";
+import imgTech3 from "../../assets/img/tech-3.webp";
+import imgTech4 from "../../assets/img/tech-4.webp";
+// import imgOther1 from "../../assets/img/other-1.webp";
+// import imgOther2 from "../../assets/img/other-2.webp";
+// import imgOther3 from "../../assets/img/other-3.webp";
 
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
@@ -64,7 +65,7 @@ const CollectionPreview = ({ collections }) => {
             }}
             id="2"
           />
-            <img
+          <img
             alt="Metal light"
             src={imgLight4}
             className="img__large"
@@ -98,11 +99,23 @@ const CollectionPreview = ({ collections }) => {
             id="1"
           />
           <img
-            alt=""
-            src={imgStool.third}
+            alt="Bluetooth speaker"
+            src={imgTech3}
             className="img__large"
             style={{
               top: "5%",
+              right: "50%",
+              transform: "translateX(50%)",
+              opacity: "0",
+            }}
+            id="4"
+          />
+            <img
+            alt="Webcam"
+            src={imgTech4}
+            className="img__small"
+            style={{
+              top: "70%",
               right: "50%",
               transform: "translateX(50%)",
               opacity: "0",
@@ -187,15 +200,15 @@ const CollectionPreview = ({ collections }) => {
             id="3"
           />
           <img
-            alt=""
-            src={imgStool.first}
+            alt="Macbook"
+            src={imgTech1}
             className="img__small"
-            style={{ bottom: "20%", right: "50%", opacity: "0" }}
+            style={{ bottom: "00%", right: "50%", opacity: "0" }}
             id="4"
           />{" "}
           <img
-            alt=""
-            src={imgStool.second}
+            alt="Large Monitor"
+            src={imgTech2}
             className="img__small"
             style={{ right: "20%", top: "12%", opacity: "0" }}
             id="4"
