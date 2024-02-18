@@ -9,16 +9,16 @@ import {
   imgSofa,
   imgStool,
   imgOtto,
-} from "../../assets/assets.js"; 
-
+} from "../../assets/assets.js";
 
 import imgChair1 from "../../assets/img/chair-1.webp";
 import imgChair2 from "../../assets/img/chair-2.webp";
 import imgChair3 from "../../assets/img/chair-3.webp";
 import imgChair4 from "../../assets/img/chair-4.webp";
-import imgLight1 from "../../assets/img/light-1.jpg";
-import imgLight2 from "../../assets/img/light-2.jpg";
-import imgLight3 from "../../assets/img/light-3.jpg";
+import imgLight1 from "../../assets/img/light-1.webp";
+import imgLight2 from "../../assets/img/light-2.webp";
+import imgLight3 from "../../assets/img/light-3.webp";
+import imgLight4 from "../../assets/img/light-4.webp";
 // import imgDesk1 from "../../assets/img/sofa-1.jpg";
 // import imgDesk2 from "../../assets/img/sofa-2.jpg";
 // import imgDesk3 from "../../assets/img/sofa-3.jpg";
@@ -28,7 +28,6 @@ import imgLight3 from "../../assets/img/light-3.jpg";
 // import imgOther1 from "../../assets/img/other-1.jpg";
 // import imgOther2 from "../../assets/img/other-2.jpg";
 // import imgOther3 from "../../assets/img/other-3.jpg";
-
 
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
@@ -53,65 +52,77 @@ const CollectionPreview = ({ collections }) => {
             style={{ left: "50%", top: "12%", opacity: "1" }}
             id="1"
           />
-                      <img
-              alt=""
-              src={imgLight3}
-              className="img__large"
-              style={{
-                top: "5%",
-                right: "50%",
-                transform: "translateX(50%)",
-                opacity: "0",
-              }}
-              id="2"
-            />
+          <img
+            alt="Blue green light and book"
+            src={imgLight3}
+            className="img__large"
+            style={{
+              top: "5%",
+              right: "50%",
+              transform: "translateX(50%)",
+              opacity: "0",
+            }}
+            id="2"
+          />
             <img
-              alt=""
-              src={imgSofa.first}
-              className="img__large"
-              style={{ left: "45%", bottom: "10%", opacity: "0" }}
-              id="3"
-            />
-            <img
-              alt=""
-              src={imgSofa.second}
-              className="img__large"
-              style={{ right: "45%", top: "-10%", opacity: "0" }}
-              id="3"
-            />
-            <img
-              alt="Ergonomic chair"
-              src={imgChair3}
-              className="img__small"
-              style={{ bottom: "20%", left: "20%", opacity: "1" }}
-              id="1"
-            />
-            <img
-              alt=""
-              src={imgStool.third}
-              className="img__large"
-              style={{
-                top: "5%",
-                right: "50%",
-                transform: "translateX(50%)",
-                opacity: "0",
-              }}
-              id="4"
-            />
-            <img
-              alt=""
-              src={imgOtto.third}
-              className="img__small"
-              style={{ bottom: "20%", left: "20%", opacity: "0" }}
-              id="5"
-            />
-            <img
-              alt=""
-              src={imgOtto.second}
-              className="img__small"
-              style={{ left: "50%", top: "12%", opacity: "0" }}
-              id="5"
-            />
+            alt="Metal light"
+            src={imgLight4}
+            className="img__large"
+            style={{
+              top: "65%",
+              right: "35%",
+              transform: "translateX(50%)",
+              opacity: "0",
+            }}
+            id="2"
+          />
+          <img
+            alt=""
+            src={imgSofa.first}
+            className="img__large"
+            style={{ left: "45%", bottom: "10%", opacity: "0" }}
+            id="3"
+          />
+          <img
+            alt=""
+            src={imgSofa.second}
+            className="img__large"
+            style={{ right: "45%", top: "-10%", opacity: "0" }}
+            id="3"
+          />
+          <img
+            alt="Ergonomic chair"
+            src={imgChair3}
+            className="img__small"
+            style={{ bottom: "20%", left: "20%", opacity: "1" }}
+            id="1"
+          />
+          <img
+            alt=""
+            src={imgStool.third}
+            className="img__large"
+            style={{
+              top: "5%",
+              right: "50%",
+              transform: "translateX(50%)",
+              opacity: "0",
+            }}
+            id="4"
+          />
+          <img
+            alt=""
+            src={imgOtto.third}
+            className="img__small"
+            style={{ bottom: "20%", left: "20%", opacity: "0" }}
+            id="5"
+          />
+          <img
+            alt=""
+            src={imgOtto.second}
+            className="img__small"
+            style={{ left: "50%", top: "12%", opacity: "0" }}
+            id="5"
+          />
         </div>
 
         <div className="preview__text">
@@ -142,7 +153,7 @@ const CollectionPreview = ({ collections }) => {
             }}
             id="1"
           />{" "}
-             <img
+          <img
             alt="Vintage chair"
             src={imgChair4}
             className="img__small"
@@ -155,10 +166,10 @@ const CollectionPreview = ({ collections }) => {
             id="1"
           />{" "}
           <img
-            alt=""
+            alt="White lamp"
             src={imgLight1}
             className="img__small"
-            style={{ bottom: "20%", right: "20%", opacity: "0" }}
+            style={{ bottom: "0%", right: "20%", opacity: "0" }}
             id="2"
           />{" "}
           <img
