@@ -71,10 +71,10 @@ const HomePage = () => {
 
       <section className="section__video">
         <img src={VideoIsh} alt="video" className="video__img" />
-
+{/* 
         <div className="blur">
           <img src={PlaySVG} alt="" className="play" />
-        </div>
+        </div> */}
       </section>
 
       <section className="section__ethos anim-content">
