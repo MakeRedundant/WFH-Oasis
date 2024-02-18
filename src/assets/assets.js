@@ -1,8 +1,8 @@
 import first from "./img/carousel-1.jpg";
-import second from "./img/carousel-2.jpg";
+import second from "./img/carousel-2.webp";
 import third from "./img/carousel-3.jpg";
-import fourth from "./img/carousel-4.jpg";
-import fifth from "./img/carousel-5.png";
+import fourth from "./img/carousel-4.webp";
+import fifth from "./img/carousel-5.webp";
 
 import imgAbout1 from "./img/about-1.jpg";
 import imgAbout2 from "./img/about-2.jpg";
