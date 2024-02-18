@@ -4,9 +4,9 @@ import "./collection-preview.styles.scss";
 import { Link } from "react-router-dom";
 
 import {
-  imgChair,
-  imgLight,
-  imgSofa,
+  // imgChair,
+  // imgLight,
+  // imgSofa,
   imgStool,
   imgOtto,
 } from "../../assets/assets.js";
@@ -19,9 +19,9 @@ import imgLight1 from "../../assets/img/light-1.webp";
 import imgLight2 from "../../assets/img/light-2.webp";
 import imgLight3 from "../../assets/img/light-3.webp";
 import imgLight4 from "../../assets/img/light-4.webp";
-// import imgDesk1 from "../../assets/img/sofa-1.jpg";
-// import imgDesk2 from "../../assets/img/sofa-2.jpg";
-// import imgDesk3 from "../../assets/img/sofa-3.jpg";
+import imgDesk1 from "../../assets/img/desk-1.webp";
+import imgDesk2 from "../../assets/img/desk-2.webp";
+import imgDesk3 from "../../assets/img/desk-3.webp";
 // import imgTech1 from "../../assets/img/tech-1.jpg";
 // import imgTech2 from "../../assets/img/tech-2.jpg";
 // import imgTech3 from "../../assets/img/tech-3.jpg";
@@ -77,15 +77,15 @@ const CollectionPreview = ({ collections }) => {
             id="2"
           />
           <img
-            alt=""
-            src={imgSofa.first}
+            alt="White desk blue background"
+            src={imgDesk1}
             className="img__large"
-            style={{ left: "45%", bottom: "10%", opacity: "0" }}
+            style={{ left: "45%", bottom: "5%", opacity: "0" }}
             id="3"
           />
           <img
-            alt=""
-            src={imgSofa.second}
+            alt="Fredde IKEA gaming desk"
+            src={imgDesk2}
             className="img__large"
             style={{ right: "45%", top: "-10%", opacity: "0" }}
             id="3"
@@ -180,8 +180,8 @@ const CollectionPreview = ({ collections }) => {
             id="2"
           />{" "}
           <img
-            alt=""
-            src={imgSofa.third}
+            alt="White desk and chair"
+            src={imgDesk3}
             className="img__large"
             style={{ right: "35%", top: "10%", opacity: "0" }}
             id="3"
