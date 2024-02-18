@@ -10,33 +10,33 @@ import imgEthos1 from "./img/ethos-1.jpg";
 import imgEthos2 from "./img/ethos-2.jpg";
 
 const imgChair = {
-  first: "./img/chair-1.jpg",
-  second: "./img/chair-2.jpg",
-  third: "./img/chair-3.jpg",
+  first: "./img/chair-1.webp",
+  second: "./img/chair-2.webp",
+  third: "./img/chair-3.webp",
 };
 
 const imgLight = {
-  first: "./img/light-1.jpg",
-  second: "./img/light-2.jpg",
-  third: "./img/light-3.jpg",
+  first: "./img/light-1.webp",
+  second: "./img/light-2.webp",
+  third: "./img/light-3.webp",
 };
 
-const imgSofa = {
-  first: "./img/sofa-1.jpg",
-  second: "./img/sofa-2.jpg",
-  third: "./img/sofa-3.jpg",
+const imgDesk = {
+  first: "./img/desk-1.webp",
+  second: "./img/desk-2.webp",
+  third: "./img/desk-3.webp",
 };
 
-const imgStool = {
-  first: "./img/stool-1.jpg",
-  second: "./img/stool-2.jpg",
-  third: "./img/stool-3.jpg",
+const imgTechnology = {
+  first: "./img/tech-1.webp",
+  second: "./img/tech-2.webp",
+  third: "./img/tech-3.webp",
 };
 
-const imgOtto = {
-  first: "./img/otto-1.jpg",
-  second: "./img/otto-2.jpg",
-  third: "./img/otto-3.jpg",
+const imgOther = {
+  first: "./img/other-1.webp",
+  second: "./img/other-2.webp",
+  third: "./img/other-3.webp",
 };
 
 const iconArrow = "./img/arrow-down.png";
@@ -69,9 +69,9 @@ export {
   imgEthos2,
   imgChair,
   imgLight,
-  imgSofa,
-  imgStool,
-  imgOtto,
+  imgDesk,
+  imgTechnology,
+  imgOther,
   iconArrow,
   logo,
   menu1,

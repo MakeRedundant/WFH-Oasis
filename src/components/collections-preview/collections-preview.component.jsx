@@ -3,14 +3,6 @@ import { InitPreviewAnimation } from "../../animations/animations";
 import "./collection-preview.styles.scss";
 import { Link } from "react-router-dom";
 
-import {
-  // imgChair,
-  // imgLight,
-  // imgSofa,
-  imgStool,
-  imgOtto,
-} from "../../assets/assets.js";
-
 import imgChair1 from "../../assets/img/chair-1.webp";
 import imgChair2 from "../../assets/img/chair-2.webp";
 import imgChair3 from "../../assets/img/chair-3.webp";

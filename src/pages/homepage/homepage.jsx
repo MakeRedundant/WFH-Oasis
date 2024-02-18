@@ -54,7 +54,7 @@ const HomePage = () => {
               king and your office into your second home. Everyone
               deserves a space that fuels their creativity and boosts their
               productivity. Oasis will be your
-              one-stop shop for turning any space into your personal paradise 🌴
+              one-stop shop for turning any space into your personal paradise.
             </p>
           </div>
 
