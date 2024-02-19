@@ -7,7 +7,7 @@ const Hero = () => {
     <div className="position-relative-wrap">
       <div className="hero">
         <div className="hero__container center-text">
-          <h1>Work from Home (WFH)</h1>
+          <h1>Transform that space <br/> into your personal Oasis</h1>
           <p className="hero__sub">
           There&lsquo;s no Wi-Fi like home Wi-Fi.
           </p>
