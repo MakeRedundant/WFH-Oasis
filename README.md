@@ -109,15 +109,11 @@ npm run dev
 ```
 This sequence ensures that your client-side code is built before starting the server.
 
-  
-
 Package.json dependencies ⚙️  
 ![Dependencies](./assets/package.json.png)
 
-
 ## 💬 Usage 
 Have fun!
-
 
 ## 🖼️ Screenshot
 
@@ -134,7 +130,8 @@ Footer
 ![Footer](./assets/Footer.png)
 
 ## 📹 Video
-GIF showing Homepage, adding a item to the cart and scroll button
+GIF  
+Showcasing Homepage, adding a item to the cart and scroll button
 ![GIF](./assets/WFH-store.gif)
   
 ## ⚖️ License 
