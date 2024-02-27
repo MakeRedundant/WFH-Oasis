@@ -13,44 +13,31 @@ import { Link } from "react-router-dom";
 class LogIn extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       email: "",
-      password: "",
+      password: ""
     };
   }
 
-  // handleSubmit = async (event) => {
-  //   event.preventDefault();
-  //   const { email, password } = this.state;
-  //   this.setState({ email: "", password: "" });
+  handleChange = (event) => {
+    const { name, value } = event.target;
+    this.setState({ [name]: value });
+  };
 
-  //   try {
-  //     await auth.signInWithEmailAndPassword(email, password);
-  //     this.state = {
-  //       email: "",
-  //       password: "",
-  //     };
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
-  // handleChange = (event) => {
-  //   const { value, name } = event.target;
-  //   this.setState({ [name]: value });
-  //   // console.log(this.state);
-  // };
+  handleSubmit = (event) => {
+    event.preventDefault();
+    // Perform your login logic here
+    // Once login is successful, you can redirect to the homepage
+    // For example, you can use the Link component to route to the homepage
+  };
 
   render() {
     return (
       <div className="logIn">
         <div className="left">
-          {/* <Link to="/login">
-            {" "}
-            <img src={logo} alt="logo" className="header__logo" />
-          </Link> */}
-          <form className="group">
+          <Link to="/">
+          </Link>
+          <form className="group" onSubmit={this.handleSubmit}>
             <h2>Welcome back home!</h2>
             <FormInput
               type="email"
@@ -68,7 +55,7 @@ class LogIn extends React.Component {
               name="password"
               required
             />
-            <CustomButton>Login</CustomButton>
+            <CustomButton type="submit">Login</CustomButton>
             Or
             <CustomButton isGoogleSignIn>
               <div className="container">
