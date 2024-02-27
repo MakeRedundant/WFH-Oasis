@@ -26,9 +26,7 @@ class LogIn extends React.Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    // Perform your login logic here
-    // Once login is successful, you can redirect to the homepage
-    // For example, you can use the Link component to route to the homepage
+
   };
 
   render() {
